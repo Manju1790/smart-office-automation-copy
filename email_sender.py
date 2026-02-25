@@ -31,3 +31,12 @@ def send_email(report_path):
     server.login(sender, password)
     server.send_message(msg)
     server.quit()
+    print("Logging in with:", sender)
+    print("Sending email to:", receiver)
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(sender, password)
+            smtp.send_message(msg)
+        print("Email sent successfully!")
+    except Exception as e:
+        print("Email failed:", e)
