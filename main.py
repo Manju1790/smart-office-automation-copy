@@ -7,7 +7,7 @@ from email_sender import send_email
 # ===============================
 # Folder Configuration
 # ===============================
-
+print("Scheduled automation active")
 INPUT_FOLDER = "input_files"
 OUTPUT_FOLDER = "reports"
 PROCESSED_FOLDER = "processed_files"
